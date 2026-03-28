@@ -1,0 +1,58 @@
+[workspace]
+resolver = "2"
+members = [
+    "bins/semantic-dns",
+    "crates/sdns-api",
+    "crates/sdns-audit",
+    "crates/sdns-bind",
+    "crates/sdns-common",
+    "crates/sdns-core",
+    "crates/sdns-dhcp",
+    "crates/sdns-fathom",
+    "crates/sdns-store",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+license = "AGPL-3.0-only"
+
+[workspace.dependencies]
+anyhow = "1"
+async-trait = "0.1"
+axum = { version = "0.8", features = ["macros", "ws"] }
+base64 = "0.22"
+chrono = { version = "0.4", features = ["serde"] }
+clap = { version = "4", features = ["derive", "env"] }
+config = "0.14"
+futures = "0.3"
+hex = "0.4"
+http = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+sqlx-core = { version = "0.8", default-features = false, features = ["_rt-tokio", "chrono", "uuid", "json"] }
+sqlx-postgres = { version = "0.8", default-features = false, features = ["chrono", "uuid"] }
+thiserror = "2"
+tokio = { version = "1", features = ["full"] }
+toml = "0.8"
+tower-http = { version = "0.6", features = ["cors", "trace", "request-id"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+uuid = { version = "1", features = ["serde", "v7"] }
+
+sdns-api = { path = "crates/sdns-api" }
+sdns-audit = { path = "crates/sdns-audit" }
+sdns-bind = { path = "crates/sdns-bind" }
+sdns-common = { path = "crates/sdns-common" }
+sdns-core = { path = "crates/sdns-core" }
+sdns-dhcp = { path = "crates/sdns-dhcp" }
+sdns-fathom = { path = "crates/sdns-fathom" }
+sdns-store = { path = "crates/sdns-store" }
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = "symbols"
+panic = "abort"

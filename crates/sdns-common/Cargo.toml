@@ -1,0 +1,16 @@
+[package]
+name = "sdns-common"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description = "Shared types, config, and auth primitives for Semantic DNS"
+license.workspace = true
+
+[dependencies]
+chrono.workspace = true
+config.workspace = true
+http.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+uuid.workspace = true

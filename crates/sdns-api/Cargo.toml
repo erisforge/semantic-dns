@@ -1,0 +1,23 @@
+[package]
+name = "sdns-api"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description = "Axum HTTP and WebSocket API for Semantic DNS"
+license.workspace = true
+
+[dependencies]
+axum.workspace = true
+chrono.workspace = true
+http.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sdns-audit.workspace = true
+sdns-bind.workspace = true
+sdns-common.workspace = true
+sdns-core.workspace = true
+sdns-dhcp.workspace = true
+sdns-fathom.workspace = true
+sdns-store.workspace = true
+tokio.workspace = true
+tracing.workspace = true

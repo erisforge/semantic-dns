@@ -1,0 +1,15 @@
+[package]
+name = "sdns-bind"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description = "DNS publishing boundary for Semantic DNS"
+license.workspace = true
+
+[dependencies]
+async-trait.workspace = true
+chrono.workspace = true
+sdns-common.workspace = true
+sdns-core.workspace = true
+sdns-store.workspace = true
+tokio.workspace = true

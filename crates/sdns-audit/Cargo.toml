@@ -1,0 +1,18 @@
+[package]
+name = "sdns-audit"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description = "Signed audit ledger support for Semantic DNS"
+license.workspace = true
+
+[dependencies]
+chrono.workspace = true
+hex.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+sqlx-core.workspace = true
+sqlx-postgres.workspace = true
+thiserror.workspace = true
+tokio.workspace = true

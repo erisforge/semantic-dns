@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #09070f;
+  --bg-elevated: #0e0c14;
+  --bg-panel: #0f0d16;
+  --bg-panel-2: #13111c;
+  --bg-rail: #09070f;
+  --text: #e8dff5;
+  --text-strong: #f4ecff;
+  --text-muted: #9b8ab8;
+  --text-dim: #6b5a85;
+  --border: #221b2f;
+  --border-strong: rgba(255, 106, 193, 0.44);
+  --accent: #ff6ac1;
+  --accent-soft: rgba(255, 106, 193, 0.14);
+  --accent-cyan: #7ef9ff;
+  --ok: #72f1b8;
+  --warn: #ffd866;
+  --critical: #ff5e7d;
+  --offline: #6b5a85;
+  --interactive-hover: rgba(126, 249, 255, 0.08);
+  --radius: 10px;
+  --shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  color-scheme: dark;
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background:
+    radial-gradient(circle at top, rgba(185, 103, 255, 0.08), transparent 22%),
+    radial-gradient(circle at right top, rgba(255, 106, 193, 0.06), transparent 18%),
+    linear-gradient(180deg, #0b0811 0%, #09070f 58%, #06040b 100%);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: transparent;
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: rgba(255, 106, 193, 0.26);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.mono {
+  font-family: "IBM Plex Mono", "SFMono-Regular", "Consolas", monospace;
+}
+
+.panel-grid {
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.surface-line {
+  position: relative;
+}
+
+.surface-line::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+.react-flow {
+  background:
+    linear-gradient(180deg, rgba(17, 16, 26, 0.9), rgba(9, 7, 15, 0.98));
+}
+
+.react-flow__panel {
+  margin: 10px;
+}
+
+.react-flow__controls button,
+.react-flow__minimap {
+  border-color: var(--border) !important;
+  background: var(--bg-panel) !important;
+  color: var(--text) !important;
+}
+
+.react-flow__background path {
+  stroke: rgba(126, 249, 255, 0.08);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: rgba(155, 138, 184, 0.35);
+  background-clip: padding-box;
+}

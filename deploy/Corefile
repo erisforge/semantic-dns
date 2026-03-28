@@ -1,0 +1,13 @@
+local:53 {
+    errors
+    log
+    reload 5s
+    file /data/semantic-dns.zone local
+}
+
+.:53 {
+    errors
+    log
+    cache 30
+    forward . 8.8.8.8
+}

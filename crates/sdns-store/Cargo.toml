@@ -1,0 +1,19 @@
+[package]
+name = "sdns-store"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description = "Storage backends for Semantic DNS state"
+license.workspace = true
+
+[dependencies]
+async-trait.workspace = true
+chrono.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sdns-common.workspace = true
+sdns-core.workspace = true
+sdns-dhcp.workspace = true
+sqlx-core.workspace = true
+sqlx-postgres.workspace = true
+tokio.workspace = true

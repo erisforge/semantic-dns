@@ -1,0 +1,8 @@
+target
+.git
+.gitignore
+semantic-dns.db
+semantic-dns-audit.db
+semantic-dns.zone
+compose.yaml
+deploy/server.env

@@ -1,0 +1,13 @@
+[package]
+name = "sdns-dhcp"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description = "DHCP fingerprinting and role assignment engine for Semantic DNS"
+license.workspace = true
+
+[dependencies]
+chrono.workspace = true
+serde.workspace = true
+sdns-common.workspace = true
+sdns-core.workspace = true

@@ -1,0 +1,18 @@
+[package]
+name = "sdns-fathom"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description = "Fathom AssetDB importer for Semantic DNS"
+license.workspace = true
+
+[dependencies]
+chrono.workspace = true
+serde.workspace = true
+sdns-common.workspace = true
+sdns-core.workspace = true
+sdns-dhcp.workspace = true
+sdns-store.workspace = true
+sqlx-core.workspace = true
+sqlx-postgres.workspace = true
+uuid.workspace = true

@@ -1,0 +1,27 @@
+[http]
+bind = "127.0.0.1:8088"
+
+[store]
+database_url = "postgres://postgres:postgres@127.0.0.1:55432/semantic_dns"
+schema = "semantic_dns"
+
+[dns]
+zone = "local"
+zone_file = "./semantic-dns.zone"
+
+[audit]
+database_url = "postgres://postgres:postgres@127.0.0.1:55432/semantic_dns"
+schema = "semantic_dns"
+
+[fathom]
+database_url = ""
+
+[[api_tokens]]
+name = "local-admin"
+token = "semantic-admin-token"
+role = "admin"
+
+[[api_tokens]]
+name = "dhcp-engine"
+token = "semantic-dhcp-token"
+role = "system"

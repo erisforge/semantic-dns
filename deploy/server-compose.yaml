@@ -1,0 +1,58 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: semantic_dns
+      POSTGRES_USER: semantic_dns
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U semantic_dns -d semantic_dns"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    volumes:
+      - semantic-dns-postgres:/var/lib/postgresql/data
+
+  semantic-dns:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      RUST_LOG: ${RUST_LOG:-info}
+      SDNS_HTTP_BIND: 0.0.0.0:8088
+      SDNS_STORE_DATABASE_URL: postgres://semantic_dns:${POSTGRES_PASSWORD}@postgres:5432/semantic_dns
+      SDNS_STORE_SCHEMA: ${SDNS_STORE_SCHEMA:-semantic_dns}
+      SDNS_AUDIT_DATABASE_URL: postgres://semantic_dns:${POSTGRES_PASSWORD}@postgres:5432/semantic_dns
+      SDNS_AUDIT_SCHEMA: ${SDNS_AUDIT_SCHEMA:-semantic_dns}
+      SDNS_DNS_ZONE: ${SDNS_DNS_ZONE:-local}
+      SDNS_ZONE_FILE: /data/semantic-dns.zone
+      SDNS_ADMIN_TOKEN: ${SDNS_ADMIN_TOKEN}
+      SDNS_DHCP_TOKEN: ${SDNS_DHCP_TOKEN}
+      SDNS_FATHOM_DATABASE_URL: ${SDNS_FATHOM_DATABASE_URL:-}
+    ports:
+      - "8088:8088"
+    volumes:
+      - semantic-dns-data:/data
+
+  dns:
+    image: coredns/coredns:1.12.1
+    restart: unless-stopped
+    depends_on:
+      semantic-dns:
+        condition: service_started
+    command: -conf /etc/coredns/Corefile
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+    volumes:
+      - ./Corefile:/etc/coredns/Corefile:ro
+      - semantic-dns-data:/data:ro
+
+volumes:
+  semantic-dns-postgres:
+  semantic-dns-data:

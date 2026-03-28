@@ -1,0 +1,23 @@
+/.DS_Store
+/target/
+/semantic-dns.db
+/semantic-dns-audit.db
+/semantic-dns.zone
+/deploy/server.env
+
+# Local AI agent / assistant state
+/.codex/
+/.codex-*/
+/.claude/
+/.claude-*/
+/.aider*
+/.cursor/
+/.continue/
+/.roo/
+/.windsurf/
+/.specstory/
+/.autogen/
+/CLAUDE.md
+/AGENT.md
+/CLAUDE*.md
+/AGENT.md
