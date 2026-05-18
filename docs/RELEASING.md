@@ -28,7 +28,7 @@ pipx run cffconvert --validate
 
 1. **Zenodo**: sign in at <https://zenodo.org> with GitHub, open
    *Account → GitHub*, and flip the toggle ON for
-   `eris-securitas/semantic-dns`. (Only releases created *after* the
+   `erisforge/semantic-dns`. (Only releases created *after* the
    toggle is on are archived.)
 2. **Software Heritage**: no account needed; the repo URL is what gets
    archived (see per-release step below).
@@ -54,7 +54,7 @@ pipx run cffconvert --validate
    captured promptly instead of waiting for the crawler:
    ```sh
    curl -X POST \
-     https://archive.softwareheritage.org/api/1/origin/save/git/url/https://github.com/eris-securitas/semantic-dns/
+     https://archive.softwareheritage.org/api/1/origin/save/git/url/https://github.com/erisforge/semantic-dns/
    ```
    Then resolve the snapshot/release SWHID at
    <https://archive.softwareheritage.org> for the tagged commit.

@@ -5,7 +5,7 @@
   "description": "Semantic DNS is an ISA-95-aligned, UNS-adjacent network context source that turns asset observations (DHCP, discovery, imported inventory) into stable, meaningful DNS records and serves that semantic view as a real DNS zone, with an audit trail of how names were assigned.",
   "version": "0.1.0",
   "license": "https://spdx.org/licenses/AGPL-3.0-only",
-  "codeRepository": "https://github.com/eris-securitas/semantic-dns",
+  "codeRepository": "https://github.com/erisforge/semantic-dns",
   "programmingLanguage": "Rust",
   "runtimePlatform": "Rust 1.88",
   "keywords": [

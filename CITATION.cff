@@ -16,8 +16,8 @@ authors:
     email: "danny@riverman.io"
     orcid: "https://orcid.org/0009-0002-2330-8203"
     affiliation: "Eris Securitas"
-repository-code: "https://github.com/eris-securitas/semantic-dns"
-url: "https://github.com/eris-securitas/semantic-dns"
+repository-code: "https://github.com/erisforge/semantic-dns"
+url: "https://github.com/erisforge/semantic-dns"
 license: AGPL-3.0-only
 version: 0.1.0
 # TODO: set to the actual release date (YYYY-MM-DD) when you tag.
