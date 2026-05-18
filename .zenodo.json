@@ -1,0 +1,24 @@
+{
+  "title": "Semantic DNS",
+  "description": "Semantic DNS is an ISA-95-aligned, UNS-adjacent network context source that turns asset observations (DHCP, discovery, imported inventory) into stable, meaningful DNS records and serves that semantic view as a real DNS zone, with an audit trail of how names were assigned.",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "AGPL-3.0-only",
+  "creators": [
+    {
+      "name": "Caudle, Daniel",
+      "affiliation": "Eris Securitas",
+      "orcid": "0009-0002-2330-8203"
+    }
+  ],
+  "keywords": [
+    "DNS",
+    "ISA-95",
+    "unified namespace",
+    "UNS",
+    "asset inventory",
+    "industrial networking",
+    "OT",
+    "DHCP"
+  ]
+}

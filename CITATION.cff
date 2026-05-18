@@ -1,0 +1,33 @@
+# Citation metadata. Validated by the cffconvert tool and read by GitHub's
+# "Cite this repository" widget and by Zenodo at release time.
+# Spec: https://citation-file-format.github.io
+cff-version: 1.2.0
+title: "Semantic DNS"
+message: "If you use this software, please cite it using these metadata."
+type: software
+abstract: >-
+  Semantic DNS is an ISA-95-aligned, UNS-adjacent network context source
+  that turns asset observations (DHCP, discovery, imported inventory) into
+  stable, meaningful DNS records and serves that semantic view as a real
+  DNS zone, with an audit trail of how names were assigned.
+authors:
+  - given-names: "Daniel"
+    family-names: "Caudle"
+    email: "danny@riverman.io"
+    orcid: "https://orcid.org/0009-0002-2330-8203"
+    affiliation: "Eris Securitas"
+repository-code: "https://github.com/eris-securitas/semantic-dns"
+url: "https://github.com/eris-securitas/semantic-dns"
+license: AGPL-3.0-only
+version: 0.1.0
+# TODO: set to the actual release date (YYYY-MM-DD) when you tag.
+date-released: "2026-05-17"
+keywords:
+  - DNS
+  - ISA-95
+  - unified namespace
+  - UNS
+  - asset inventory
+  - industrial networking
+  - OT
+  - DHCP
