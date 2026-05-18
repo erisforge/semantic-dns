@@ -20,8 +20,7 @@ repository-code: "https://github.com/erisforge/semantic-dns"
 url: "https://github.com/erisforge/semantic-dns"
 license: AGPL-3.0-only
 version: 0.1.0
-# TODO: set to the actual release date (YYYY-MM-DD) when you tag.
-date-released: "2026-05-17"
+date-released: "2026-05-18"
 keywords:
   - DNS
   - ISA-95
